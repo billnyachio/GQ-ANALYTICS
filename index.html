@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GQ Analytics empowers businesses with smart, data-driven systems that enhance financial clarity, efficiency, and sustainable growth.">
+  <meta name="keywords" content="financial systems, business analytics, dashboards, data insights, Kenya, GQ Analytics">
+  <meta property="og:title"       content="Green's Quant (GQ Analytics)">
+  <meta property="og:description" content="Build Systems That Strengthen Your Business's Financial Health.">
+  <meta property="og:image"       content="assets/images/logo.png">
+  <meta property="og:type"        content="website">
+  <title>Green's Quant (GQ Analytics) — Build Systems That Strengthen Your Business's Financial Health</title>
+
+  <!-- Favicon — swap with your logo file once uploaded -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- Tailwind (utility layer, prefixed to avoid Bootstrap conflicts) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { corePlugins: { preflight: false }, prefix: 'tw-' };</script>
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ══ Netlify Forms — hidden form pre-render (required for detection) ══ -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text"   name="name">
+    <input type="email"  name="email">
+    <input type="tel"    name="phone">
+    <select              name="service"></select>
+    <textarea            name="message"></textarea>
+  </form>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+
+    <!-- Logo: shows image if available, falls back to text mark -->
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="assets/images/logo.png"
+             alt="GQ Analytics Logo"
+             class="nav-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="nav-logo-fallback" style="display:none;">GQ</span>
+      </div>
+      <div>
+        <div class="nav-logo-name">Green's Quant</div>
+        <span class="nav-logo-sub">GQ Analytics</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#values">Why Us</a></li>
+      <li class="nav-cta"><a href="#contact">Get Started</a></li>
+    </ul>
+
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" role="dialog" aria-label="Navigation">
+  <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#values">Why Us</a>
+  <a href="#contact">Get Started</a>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO — CINEMATIC SLIDESHOW
+════════════════════════════════════════════════════════════ -->
+<section id="hero">
+
+  <!-- Background slides with Ken Burns zoom -->
+  <div class="slide-track">
+
+    <div class="slide is-active">
+      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&q=85')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&q=85')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1605792657660-596af9009e82?w=1800&q=85')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+
+  </div>
+
+  <!-- Film grain texture -->
+  <div class="hero-grain"></div>
+
+  <!-- Scroll cue (left side) -->
+  <div class="hero-scroll-cue">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+
+  <!-- ── Main content grid ── -->
+  <div class="hero-body">
+
+    <!-- Left: headline + CTAs -->
+    <div class="hero-left">
+      <div class="hero-kicker">
+        <span class="kicker-dot"></span>
+        Data-Driven Financial Systems &middot; Nairobi, Kenya
+      </div>
+
+      <h1 class="hero-headline">
+        Build Systems<br>
+        That <em>Strengthen</em><br>
+        Financial Health
+      </h1>
+
+      <p class="hero-sub">
+        GQ Analytics designs and implements customized business systems that simplify financial management, sharpen decision-making, and power sustainable growth.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">
+          Start Your Project <span class="arrow-icon">&#8594;</span>
+        </a>
+        <a href="#services" class="btn btn-ghost-light">
+          Explore Services
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: live performance data card -->
+    <div class="hero-right">
+      <div class="hero-data-card">
+        <div class="hdc-header">
+          <span class="hdc-title">System Performance</span>
+          <span class="hdc-live"><span class="hdc-live-dot"></span>Live</span>
+        </div>
+
+        <div class="hdc-metric">
+          <div class="hdc-metric-top">
+            <span class="hdc-metric-label">Financial Visibility</span>
+            <span class="hdc-metric-val">96%</span>
+          </div>
+          <div class="hdc-bar"><div class="hdc-fill" data-w="96%"></div></div>
+        </div>
+
+        <div class="hdc-metric">
+          <div class="hdc-metric-top">
+            <span class="hdc-metric-label">Reporting Accuracy</span>
+            <span class="hdc-metric-val">99%</span>
+          </div>
+          <div class="hdc-bar"><div class="hdc-fill" data-w="99%"></div></div>
+        </div>
+
+        <div class="hdc-metric">
+          <div class="hdc-metric-top">
+            <span class="hdc-metric-label">Operational Efficiency</span>
+            <span class="hdc-metric-val">88%</span>
+          </div>
+          <div class="hdc-bar"><div class="hdc-fill" data-w="88%"></div></div>
+        </div>
+
+        <div class="hdc-divider"></div>
+
+        <div class="hdc-stats">
+          <div class="hdc-stat">
+            <span class="hdc-stat-num"><span data-to="100">0</span><em>%</em></span>
+            <span class="hdc-stat-lbl">Confidentiality</span>
+          </div>
+          <div class="hdc-stat">
+            <span class="hdc-stat-num"><span data-to="24">0</span><em>h</em></span>
+            <span class="hdc-stat-lbl">Response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Slide navigation tabs ── -->
+  <div class="hero-nav">
+
+    <button class="slide-tab is-active" data-slide="0">
+      <div class="slide-tab-progress"></div>
+      <span class="slide-tab-num">01</span>
+      <span class="slide-tab-label">Financial Clarity</span>
+    </button>
+
+    <button class="slide-tab" data-slide="1">
+      <div class="slide-tab-progress"></div>
+      <span class="slide-tab-num">02</span>
+      <span class="slide-tab-label">Data Systems</span>
+    </button>
+
+    <button class="slide-tab" data-slide="2">
+      <div class="slide-tab-progress"></div>
+      <span class="slide-tab-num">03</span>
+      <span class="slide-tab-label">Business Growth</span>
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     TRUST STRIP
+════════════════════════════════════════════════════════════ -->
+<div id="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">&#128274; <span class="trust-text">Strict Confidentiality Guaranteed</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">&#128202; <span class="trust-text">Customized Business Systems</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">&#9889; <span class="trust-text">Fast Implementation</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">&#127891; <span class="trust-text">Staff Training Included</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">&#128222; <span class="trust-text">Ongoing Technical Support</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">&#127807; <span class="trust-text">Nairobi, Kenya</span></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-inner">
+
+    <!-- Text -->
+    <div class="about-text reveal">
+      <div class="section-eyebrow">About GQ Analytics</div>
+      <h2 class="section-title">Data-Focused Solutions for <em>Confident Growth</em></h2>
+      <p class="section-body">
+        Green's Quant (GQ Analytics) is a data-focused solutions provider dedicated to helping businesses build structured systems that improve financial visibility and operational efficiency. We transform raw, disorganized data into clear, actionable insights through customized dashboards and streamlined workflows.
+      </p>
+      <p class="section-body" style="margin-top:16px;">
+        From system setup to staff training and ongoing technical support — we work closely with you to ensure you don't just adopt the system, but fully benefit from it.
+      </p>
+
+      <div class="about-pillars" style="margin-top:40px;">
+
+        <div class="about-pillar">
+          <div class="about-pillar-icon">&#127919;</div>
+          <div>
+            <div class="about-pillar-name">Precision</div>
+            <div class="about-pillar-desc">Accurate, reliable systems built to your exact business needs.</div>
+          </div>
+        </div>
+
+        <div class="about-pillar">
+          <div class="about-pillar-icon">&#128202;</div>
+          <div>
+            <div class="about-pillar-name">Clarity</div>
+            <div class="about-pillar-desc">Clear dashboards and real-time visibility into what matters.</div>
+          </div>
+        </div>
+
+        <div class="about-pillar">
+          <div class="about-pillar-icon">&#128640;</div>
+          <div>
+            <div class="about-pillar-name">Growth</div>
+            <div class="about-pillar-desc">Scalable infrastructure that grows with your business.</div>
+          </div>
+        </div>
+
+        <div class="about-pillar">
+          <div class="about-pillar-icon">&#129309;</div>
+          <div>
+            <div class="about-pillar-name">Partnership</div>
+            <div class="about-pillar-desc">We stay with you long after delivery to ensure ongoing success.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:44px;">
+        <a href="#contact" class="btn btn-primary">Work With Us <span class="arrow-icon">&#8594;</span></a>
+      </div>
+    </div>
+
+    <!-- Dashboard mockup visual -->
+    <div class="about-visual reveal reveal-d2">
+      <div class="about-mockup">
+        <div class="mockup-bar-strip">
+          <div class="mockup-dots">
+            <div class="mockup-dot mockup-dot-r"></div>
+            <div class="mockup-dot mockup-dot-y"></div>
+            <div class="mockup-dot mockup-dot-g"></div>
+          </div>
+          <div class="mockup-tab-pill">gq-dashboard.analytics</div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-lbl">Monthly Revenue Performance</div>
+          <div class="mockup-bars">
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar hi"style="height:0%"></div>
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar hi"style="height:0%"></div>
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar hi"style="height:0%"></div>
+            <div class="mbar"   style="height:0%"></div>
+            <div class="mbar hi"style="height:0%"></div>
+          </div>
+          <div class="mockup-kpis">
+            <div class="mkpi">
+              <span class="mkpi-val">&#8593;32%</span>
+              <span class="mkpi-lbl">Revenue</span>
+            </div>
+            <div class="mkpi">
+              <span class="mkpi-val">&#8595;18%</span>
+              <span class="mkpi-lbl">Expenses</span>
+            </div>
+            <div class="mkpi">
+              <span class="mkpi-val">99%</span>
+              <span class="mkpi-lbl">Accuracy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-badge-float">
+        <div class="abf-icon">&#128274;</div>
+        <div>
+          <div class="abf-num">100%</div>
+          <div class="abf-lbl">Data<br>Confidential</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="services-inner">
+    <div class="services-head reveal">
+      <div>
+        <div class="section-eyebrow">What We Do</div>
+        <h2 class="section-title">Our <em>Services</em></h2>
+      </div>
+      <div style="flex-shrink:0;">
+        <p style="font-size:.9rem;color:var(--text-soft);max-width:320px;line-height:1.7;">
+          From first setup to ongoing support &mdash; comprehensive solutions tailored to your business.
+        </p>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal reveal-d1">
+        <span class="service-num">01</span>
+        <div class="service-icon">&#127959;&#65039;</div>
+        <div class="service-name">Business System Setup</div>
+        <p class="service-desc">Design and implementation of customized systems to manage finances, track performance, and streamline business operations.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d2">
+        <span class="service-num">02</span>
+        <div class="service-icon">&#128200;</div>
+        <div class="service-name">Monitoring &amp; Evaluation</div>
+        <p class="service-desc">Ongoing assessment of system performance to ensure efficiency, accuracy, and alignment with your business goals.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d3">
+        <span class="service-num">03</span>
+        <div class="service-icon">&#127891;</div>
+        <div class="service-name">Staff Training</div>
+        <p class="service-desc">Hands-on training that equips your team with the skills to effectively use and maintain all implemented systems.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d1">
+        <span class="service-num">04</span>
+        <div class="service-icon">&#128295;</div>
+        <div class="service-name">Technical Support</div>
+        <p class="service-desc">Reliable support to troubleshoot issues, optimize functionality, and scale systems as your business grows.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d2">
+        <span class="service-num">05</span>
+        <div class="service-icon">&#128193;</div>
+        <div class="service-name">Data Organization &amp; Interpretation</div>
+        <p class="service-desc">Structuring, cleaning, and analyzing existing data to uncover insights and improve decision-making quality.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d3">
+        <span class="service-num">06</span>
+        <div class="service-icon">&#128202;</div>
+        <div class="service-name">Customized Dashboards</div>
+        <p class="service-desc">Interactive dashboards providing real-time visibility into key financial and operational metrics for your business.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+      <div class="service-card reveal reveal-d2">
+        <span class="service-num">07</span>
+        <div class="service-icon">&#128203;</div>
+        <div class="service-name">Data &amp; Reporting Training</div>
+        <p class="service-desc">Building your team's capacity in data management, reporting standards, and analytical thinking.</p>
+        <div class="service-arrow">&#8594;</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FEATURED PROJECTS
+════════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="projects-inner">
+    <div class="projects-head reveal">
+      <div>
+        <div class="section-eyebrow light">Our Work</div>
+        <h2 class="section-title light">Featured <em style="color:var(--g-400)">Projects</em></h2>
+        <p class="section-body light" style="margin-top:8px;">
+          A selection of businesses supported in strengthening financial management, data visibility, and operational efficiency.
+        </p>
+      </div>
+      <div>
+        <a href="#contact" class="btn btn-primary">Start a Project <span class="arrow-icon">&#8594;</span></a>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ── Replace these with your real client names and results ── -->
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-header">
+          <div class="project-icon-wrap">&#127962;</div>
+          <span class="project-tag">Retail &amp; Commerce</span>
+        </div>
+        <div class="project-name">Client Business A</div>
+        <p class="project-result">Improved expense tracking accuracy and reduced month-end closing time significantly through a structured reporting system.</p>
+        <div class="project-footer">&#10003; System Delivered &amp; Operational</div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-header">
+          <div class="project-icon-wrap">&#127970;</div>
+          <span class="project-tag">Financial Services</span>
+        </div>
+        <div class="project-name">Client Business B</div>
+        <p class="project-result">Implemented a real-time dashboard giving management instant visibility into cash flow positions and key performance indicators.</p>
+        <div class="project-footer">&#10003; System Delivered &amp; Operational</div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-header">
+          <div class="project-icon-wrap">&#127973;</div>
+          <span class="project-tag">Healthcare</span>
+        </div>
+        <div class="project-name">Client Business C</div>
+        <p class="project-result">Streamlined operational reporting and trained staff &mdash; significantly reducing manual data entry errors and processing time.</p>
+        <div class="project-footer">&#10003; System Delivered &amp; Operational</div>
+      </div>
+
+      <div class="project-card reveal reveal-d2">
+        <div class="project-header">
+          <div class="project-icon-wrap">&#128666;</div>
+          <span class="project-tag">Logistics &amp; Supply Chain</span>
+        </div>
+        <div class="project-name">Client Business D</div>
+        <p class="project-result">Built a performance monitoring system enabling data-driven route and cost optimization, reducing overhead by measurable margins.</p>
+        <div class="project-footer">&#10003; System Delivered &amp; Operational</div>
+      </div>
+
+    </div>
+
+    <div class="projects-cta reveal">
+      <p>Want to see your business here? Let's build something powerful together.</p>
+      <a href="#contact" class="btn btn-primary">Get In Touch <span class="arrow-icon">&#8594;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     WHY US
+════════════════════════════════════════════════════════════ -->
+<section id="values">
+  <div class="values-inner">
+    <div class="values-head reveal">
+      <div class="section-eyebrow">Why GQ Analytics</div>
+      <h2 class="section-title">Built on <em>Trust</em>,<br>Delivered with Precision</h2>
+      <p class="section-body" style="margin:16px auto 0;">
+        We don't just hand over tools &mdash; we become long-term partners in your business's financial success.
+      </p>
+    </div>
+
+    <div class="values-grid">
+
+      <div class="value-card reveal reveal-d1">
+        <span class="value-icon">&#128274;</span>
+        <div class="value-name">Strict Confidentiality</div>
+        <p class="value-desc">All client data is handled with absolute privacy. Never shared, never disclosed to any third party.</p>
+      </div>
+
+      <div class="value-card reveal reveal-d2">
+        <span class="value-icon">&#9889;</span>
+        <div class="value-name">Fast Implementation</div>
+        <p class="value-desc">We move quickly without sacrificing quality, getting your systems live and operational efficiently.</p>
+      </div>
+
+      <div class="value-card reveal reveal-d3">
+        <span class="value-icon">&#127919;</span>
+        <div class="value-name">Tailored Solutions</div>
+        <p class="value-desc">Every system is custom-built to match your business's unique structure, needs, and growth stage.</p>
+      </div>
+
+      <div class="value-card reveal reveal-d1">
+        <span class="value-icon">&#128218;</span>
+        <div class="value-name">Knowledge Transfer</div>
+        <p class="value-desc">We train your team thoroughly so you're never left dependent on external support indefinitely.</p>
+      </div>
+
+      <div class="value-card reveal reveal-d2">
+        <span class="value-icon">&#128222;</span>
+        <div class="value-name">Ongoing Support</div>
+        <p class="value-desc">We remain available post-delivery to optimize, troubleshoot, and scale as your business evolves.</p>
+      </div>
+
+      <div class="value-card reveal reveal-d3">
+        <span class="value-icon">&#128202;</span>
+        <div class="value-name">Actionable Insights</div>
+        <p class="value-desc">We transform raw numbers into clear, confident decisions that move your business forward.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CONTACT — Netlify Forms
+════════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+
+    <!-- Info panel -->
+    <div class="reveal">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Let's Build Your <em>Financial System</em></h2>
+      <p class="section-body" style="margin-bottom:44px;">
+        Whether starting from scratch or improving existing data &mdash; we respond within 24 hours and are ready to help your business grow with clarity.
+      </p>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">&#9993;&#65039;</div>
+        <div>
+          <span class="contact-item-lbl">Email</span>
+          <a href="mailto:gqconsulting.ke@gmail.com" class="contact-item-val">gqconsulting.ke@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">&#128222;</div>
+        <div>
+          <span class="contact-item-lbl">Phone / WhatsApp</span>
+          <a href="tel:+254113751900" class="contact-item-val">0113 751 900</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon">&#128205;</div>
+        <div>
+          <span class="contact-item-lbl">Location</span>
+          <span class="contact-item-val">Nairobi, Kenya</span>
+        </div>
+      </div>
+
+      <div class="privacy-seal">
+        <div class="privacy-seal-icon">&#128272;</div>
+        <p><strong>Your privacy is guaranteed.</strong> All information you share is treated with strict confidentiality and used solely to respond to your enquiry. We never share client data.</p>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="reveal reveal-d2">
+      <div class="contact-form-card">
+        <div class="form-card-title">Send Us a Message</div>
+        <p class="form-card-sub">Fill in the form below and Stella will be in touch promptly.</p>
+
+        <div class="form-alert" id="form-alert"></div>
+
+        <!--
+          Netlify Forms:
+          - name="contact"        tells Netlify which form to track
+          - data-netlify="true"   enables Netlify processing
+          - netlify-honeypot      spam protection (hidden field)
+        -->
+        <form id="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              novalidate>
+
+          <!-- Honeypot (hidden from humans) -->
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><input name="bot-field"></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="0700 000 000">
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service&hellip;</option>
+                <option>Business System Setup</option>
+                <option>Monitoring &amp; Evaluation</option>
+                <option>Staff Training</option>
+                <option>Technical Support</option>
+                <option>Data Organization &amp; Interpretation</option>
+                <option>Customized Dashboards</option>
+                <option>Data &amp; Reporting Training</option>
+                <option>Not sure yet &mdash; advise me</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell Us About Your Business <span class="req">*</span></label>
+            <textarea id="message" name="message"
+              placeholder="Briefly describe your business and what you'd like to achieve with GQ Analytics&#8230;"
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            Send Message <span class="arrow-icon">&#8594;</span>
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">
+          <div class="nav-logo-mark">
+            <img src="assets/images/logo.png"
+                 alt="GQ Analytics"
+                 class="nav-logo-img"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <span class="nav-logo-fallback" style="display:none;">GQ</span>
+          </div>
+          <div>
+            <div class="nav-logo-name">Green's Quant</div>
+            <span class="nav-logo-sub">GQ Analytics</span>
+          </div>
+        </a>
+        <p>Empowering businesses with smart, data-driven systems that enhance financial clarity, efficiency, and sustainable growth.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#values">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">System Setup</a></li>
+          <li><a href="#services">Dashboards</a></li>
+          <li><a href="#services">Staff Training</a></li>
+          <li><a href="#services">Technical Support</a></li>
+          <li><a href="#services">Data &amp; Reporting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:gqconsulting.ke@gmail.com">gqconsulting.ke@gmail.com</a></li>
+          <li><a href="tel:+254113751900">0113 751 900</a></li>
+          <li><a href="#contact">Nairobi, Kenya</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="copy-year">2025</span> <span>Green's Quant (GQ Analytics)</span>. All rights reserved.</p>
+      <span class="footer-tagline">Built with precision &middot; Designed for growth</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Scripts ── -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // Dynamic copyright year (replaces PHP's date('Y'))
+  document.getElementById('copy-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

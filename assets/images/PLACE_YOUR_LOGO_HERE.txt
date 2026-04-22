@@ -1,0 +1,12 @@
+Save your logo file in this folder as:
+
+  logo.png   (recommended — transparent background, square shape)
+
+The website will automatically use it in:
+  - Navbar (top left)
+  - Footer
+  - Browser tab favicon
+  - Social media preview (og:image)
+
+If you use a different filename, update the <img> src and <link rel="icon">
+tags in index.html accordingly.
