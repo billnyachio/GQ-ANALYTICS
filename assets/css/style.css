@@ -1033,6 +1033,192 @@ body {
 .projects-cta p { color: rgba(255,255,255,0.38); font-size: 0.88rem; margin-bottom: 18px; }
 
 /* ============================================================
+   TESTIMONIAL CARDS
+   ============================================================ */
+
+/* Three-column grid */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* Individual card */
+.testi-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--t-mid);
+  overflow: hidden;
+}
+.testi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--g-700), var(--g-400));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-slow);
+}
+.testi-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(52,211,153,0.22);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(0,0,0,0.45);
+}
+.testi-card:hover::before { transform: scaleX(1); }
+
+/* Large opening quote mark */
+.testi-quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0.7;
+  color: var(--g-700);
+  opacity: 0.7;
+  margin-bottom: 16px;
+  display: block;
+  font-style: normal;
+}
+
+/* Quote body */
+.testi-body {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  font-weight: 300;
+  font-style: italic;
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+/* Footer: logo + name */
+.testi-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  margin-top: auto;
+}
+
+/* Logo container */
+.testi-logo-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 4px;
+}
+.testi-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Text fallback when logo not found */
+.testi-logo-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--g-700), var(--g-500));
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+/* Client name and verified tag */
+.testi-client-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.testi-client-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--g-500);
+  text-transform: uppercase;
+}
+
+/* Stats trust bar */
+.testi-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 28px 40px;
+  margin-bottom: 0;
+}
+.testi-trust-stat {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.testi-trust-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.testi-trust-num em {
+  color: var(--g-400);
+  font-style: normal;
+  font-size: 1.8rem;
+}
+.testi-trust-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.testi-trust-divider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,0.08);
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .testi-card:last-child { grid-column: span 2; max-width: 600px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 640px) {
+  .testi-grid { grid-template-columns: 1fr; }
+  .testi-card:last-child { grid-column: span 1; max-width: none; }
+  .testi-trust-row { flex-direction: column; gap: 20px; padding: 24px; }
+  .testi-trust-divider { width: 40px; height: 1px; margin: 0; }
+}
+
+/* ============================================================
    VALUES
    ============================================================ */
 #values {
